@@ -44,6 +44,7 @@ public class DataSetupServicePostgres implements CommandLineRunner {
                 .sql(query)
                 .then()
                 .doOnNext(r->System.out.println(r))
+                .doOnError(r-> System.out.println(r.getStackTrace()))
                 .subscribe();
 
     }

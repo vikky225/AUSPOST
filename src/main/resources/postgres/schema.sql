@@ -6,6 +6,7 @@ create table postcodedetail (
 id serial primary key,
 postcode int,
 suburb varchar(50)
+
 );
 
 INSERT INTO postcodedetail(postcode,suburb) VALUES( 6532,'CARRARANG');
@@ -297,7 +298,6 @@ INSERT INTO postcodedetail(postcode,suburb) VALUES( 6429,'WALLAROO');
 INSERT INTO postcodedetail(postcode,suburb) VALUES( 6430,'BINDULI');
 INSERT INTO postcodedetail(postcode,suburb) VALUES( 6430,'BROADWOOD');
 INSERT INTO postcodedetail(postcode,suburb) VALUES( 6430,'HANNANS');
-INSERT INTO postcodedetail(postcode,suburb) VALUES( 6430,'KALGOORLIE');
 INSERT INTO postcodedetail(postcode,suburb) VALUES( 6430,'KARLKURLA');
 INSERT INTO postcodedetail(postcode,suburb) VALUES( 6430,'LAMINGTON');
 INSERT INTO postcodedetail(postcode,suburb) VALUES( 6430,'MULLINGAR');
@@ -5603,6 +5603,7 @@ INSERT INTO postcodedetail(postcode,suburb) VALUES( 4357,'CYPRESS GARDENS');
 INSERT INTO postcodedetail(postcode,suburb) VALUES( 4357,'DOMVILLE');
 INSERT INTO postcodedetail(postcode,suburb) VALUES( 4357,'FOREST RIDGE');
 INSERT INTO postcodedetail(postcode,suburb) VALUES( 4357,'GRAYS GATE');
+
 INSERT INTO postcodedetail(postcode,suburb) VALUES( 4357,'KOOROONGARRA');
 INSERT INTO postcodedetail(postcode,suburb) VALUES( 4357,'LAVELLE');
 INSERT INTO postcodedetail(postcode,suburb) VALUES( 4357,'LEMONTREE');
@@ -15503,7 +15504,6 @@ INSERT INTO postcodedetail(postcode,suburb) VALUES( 2611,'PIERCES CREEK');
 INSERT INTO postcodedetail(postcode,suburb) VALUES( 2611,'RIVETT');
 INSERT INTO postcodedetail(postcode,suburb) VALUES( 2611,'STIRLING');
 INSERT INTO postcodedetail(postcode,suburb) VALUES( 2611,'URIARRA');
-INSERT INTO postcodedetail(postcode,suburb) VALUES( 2611,'URIARRA');
 INSERT INTO postcodedetail(postcode,suburb) VALUES( 2049,'LEWISHAM');
 INSERT INTO postcodedetail(postcode,suburb) VALUES( 2049,'PETERSHAM');
 INSERT INTO postcodedetail(postcode,suburb) VALUES( 2049,'PETERSHAM NORTH');
@@ -16356,4 +16356,4 @@ INSERT INTO postcodedetail(postcode,suburb) VALUES( 2823,'DANDALOO');
 INSERT INTO postcodedetail(postcode,suburb) VALUES( 2823,'GIN GIN');
 INSERT INTO postcodedetail(postcode,suburb) VALUES( 2823,'TRANGIE');
 INSERT INTO postcodedetail(postcode,suburb) VALUES( 2824,'BEEMUNNEL');
-INSERT INTO postcodedetail(postcode,suburb) VALUES( 2824,'EENAWEENA');
+
