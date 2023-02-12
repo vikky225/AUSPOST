@@ -1,12 +1,14 @@
 # AusPostReactiveWebFlux
 
-Post code lookup service
+POST CODE LOOKUP SERVICE
+
 A postcode service to show the rest api architecture within Australia postcode data.
 
 This is a sample Java (Jdk 11) / Maven / Spring Boot Reactive Webflux (Spring 5) application with shared redis and Docker (for redis, pgadmin, postgresql)
 along with Spring Reactive Security
 
 ABOUT THE SERVICE
+
 The service is a postcode lookup service.
 
 An API that allows mobile clients to retrieve the suburb information
@@ -20,6 +22,7 @@ have to work out how this should work)
 Some form of persistence.
 
 ASSUMPTION 
+
 Record referenced from third party service does have few duplications so have not applied Unique key constraints whereas for test data 
 we have done that,under resource\h2\postcodes.sql with limited set of records (postcode suburb combination is unique)
 If 3rd Party API these records updated frequently than  we need event driven arch while integration with 3rd party service.
@@ -35,7 +38,8 @@ create table postcodedetail (
 );
 
 
-HOW TO RUN LOCALLY WITH DOCKER (RECOMMENDED)
+//HOW TO RUN LOCALLY WITH DOCKER (RECOMMENDED)
+
 run  from terminal from project folder 
 docker compose up 
 
@@ -74,7 +78,7 @@ java -jar lookup-service-0.0.1-SNAPSHOT.jar
 or import in Intellij or your faviroute tool and Run main Application LookupServiceApplication. 
 
 
-ENDPOINT WITH REQUESTS :
+//ENDPOINT WITH REQUESTS :
 
 GET /api/postcode-detail/all HTTP/1.1
 Host: localhost:8080
@@ -128,7 +132,7 @@ Few Sample Postcode snippet after running
 
 
 
-CURRENT DESIGN :
+//CURRENT DESIGN :
 
 Used Spring webflux Reactive strem for some endpoints to depict Non Blocking I/O behavior ,if concuurent threads from client app than it can scale better as non blocking,  Further used redis cache as well with Scheduler which fetches every 15 seconds from DB and Put it in Hash Redis , which can be used to access endpoints
 (few endpoints for redis consideratino has been skipped but can be done) , This will have High Throughput and Lower laterncy , we could have used Cache Aside Pattern as well. 
@@ -141,9 +145,9 @@ and get endpoints , Admin only allowed for POST,PUT,DELETE endpoints and For GET
 You will get 401 ,403 etc client server error depends on auth config. 
 
 
-FURTHER IMPROVEMENT CAN BE DONE.. :
+//FURTHER IMPROVEMENT CAN BE DONE.. :
 
-Test can be writen with more coverage..
+Test can be extended  with more coverage..
 Desing Consideration and To Do further- Server side event or Redis Pub Sub model can be used if integrating with third party and any update in Source DB to notify consumer about update and take action. 
 Could have used Parallel Stream for fetching records in stream pipeline.
 Custom Exception handling could have been done and few inputs and outputs validations ( right now we are sending 2xxx, and for Auth eror 4XX etc)
