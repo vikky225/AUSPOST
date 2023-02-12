@@ -152,7 +152,7 @@ Desing Consideration and To Do further- Server side event or Redis Pub Sub model
 Could have used Parallel Stream for fetching records in stream pipeline.
 Custom Exception handling could have been done and few inputs and outputs validations ( right now we are sending 2xxx, and for Auth eror 4XX etc)
 we can return list of Postcodes or Suburbs as well if needed to the client rather than combinations of postcode and suburb and can swith between json vs stream .. 
-Can use profile etc for various environment and deployed in ECS/Farget..
+Can use profile etc for various environment and deploye containers in ECS/Farget..
 
 
 
