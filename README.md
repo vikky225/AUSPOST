@@ -134,8 +134,7 @@ Few Sample Postcode snippet after running
 
 //CURRENT DESIGN :
 
-Used Spring webflux Reactive strem for some endpoints to depict Non Blocking I/O behavior ,if concuurent threads from client app than it can scale better as non blocking,  Further used redis cache as well with Scheduler which fetches every 15 seconds from DB and Put it in Hash Redis , which can be used to access endpoints
-(few endpoints for redis consideratino has been skipped but can be done) , This will have High Throughput and Lower laterncy , we could have used Cache Aside Pattern as well. 
+Used Spring webflux Reactive strem for some endpoints to depict Non Blocking I/O behavior ,if concuurent threads from client app than it can scale better as non blocking,Further used redis cache as well with Scheduler which fetches every 15 seconds from DB and Put it in Hash Redis , which can be used to access endpoints  (few endpoints for redis consideratino has been skipped but can be done) , This will have High Throughput and Lower laterncy , we could have used Cache Aside Pattern as well. 
 
 Used Docker for Redis,PgAdmin, Postgress to Spin up and play around with different endpoints, 
 
@@ -152,6 +151,7 @@ Desing Consideration and To Do further- Server side event or Redis Pub Sub model
 Could have used Parallel Stream for fetching records in stream pipeline.
 Custom Exception handling could have been done and few inputs and outputs validations ( right now we are sending 2xxx, and for Auth eror 4XX etc)
 we can return list of Postcodes or Suburbs as well if needed to the client rather than combinations of postcode and suburb and can swith between json vs stream .. 
+Redis Security etc.
 Can use profile etc for various environment and deploye containers in ECS/Farget..
 
 
