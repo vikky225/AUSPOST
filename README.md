@@ -106,7 +106,26 @@ Postman-Token: 66832f0f-767f-db40-52d3-af485b0e82b6
 
 Rest Other endpints have been created for put and delete and few gets for extendibility further ..
 
+Few Sample Postcode snippet after running
+
 <img width="946" alt="image" src="https://user-images.githubusercontent.com/16664076/218326127-ec6a21a9-3c8e-428d-9a06-756856bebf39.png">
+
+403 Access denier wrong username password for post
+<img width="1100" alt="image" src="https://user-images.githubusercontent.com/16664076/218327429-db688961-caa0-4d72-a988-fcb216330575.png">
+
+401 without Basic Auth
+<img width="1084" alt="image" src="https://user-images.githubusercontent.com/16664076/218327456-f623ed2d-34e9-40dc-bf3b-34279279c122.png">
+
+200 with Admin User Basic Auth
+<img width="1096" alt="image" src="https://user-images.githubusercontent.com/16664076/218327497-05a09ee8-44d3-477d-9ae4-a039a28a7410.png">
+
+200 Get Postcode details  by Subrub name (user and admin only allowed to have this running)
+<img width="1084" alt="image" src="https://user-images.githubusercontent.com/16664076/218327563-05878566-4cdf-4a9f-9c3b-3750f0b9888d.png">
+
+200 Get Suburb details by postCode name ( user and admin only will allow to have this running)
+<img width="1089" alt="image" src="https://user-images.githubusercontent.com/16664076/218327630-4759b51e-655c-418f-b5c1-4ca09dc5e2a0.png">
+
+
 
 
 CURRENT DESIGN :
@@ -127,9 +146,10 @@ FURTHER IMPROVEMENT CAN BE DONE.. :
 Test can be writen with more coverage..
 Desing Consideration and To Do further- Server side event or Redis Pub Sub model can be used if integrating with third party and any update in Source DB to notify consumer about update and take action. 
 Could have used Parallel Stream for fetching records in stream pipeline.
-Custom Exception handling could have been done .. ( right now we are sending 2xxx, and for Auth eror 4XX etc)
+Custom Exception handling could have been done and few inputs and outputs validations ( right now we are sending 2xxx, and for Auth eror 4XX etc)
 we can return list of Postcodes or Suburbs as well if needed to the client rather than combinations of postcode and suburb and can swith between json vs stream .. 
 Can use profile etc for various environment and deployed in ECS/Farget..
+
 
 
 
