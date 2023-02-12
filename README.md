@@ -43,10 +43,12 @@ docker compose up
 It will spin up PgAdmin, redis running on 6379 and postgressql 
 
 login to PgAdmin from url localhost:9000   
+
 username : admin@admin.com
 password: admin
+
 clck on add server and give host name as postgres , username as postgres , password as postgres 
-you will see schema and table with mentioned name  (reactive doesn't support at the moment auto creation so we have to do like that)
+you will see schema and table with mentioned name  (reactive doesn't support at the moment auto creation so we have to do like that) 
 
 you can go to redis bash from terminal docker exec -it redis bash 
 than redis-cli
@@ -153,7 +155,7 @@ Custom Exception handling could have been done and few inputs and outputs valida
 
 we can return list of Postcodes or Suburbs as well if needed to the client rather than combinations of postcode and suburb and can swith between json vs stream .. 
 
-Redis Security etc. and JWT Auth or Oauth.
+Redis Security etc. and JWT Auth or Oauth , docker compose upgrade etc
 
 Can use profile etc for various environment and deploye containers in ECS/Farget..
 
