@@ -4,7 +4,7 @@ POST CODE LOOKUP SERVICE
 
 A postcode service to show the rest api architecture within Australia postcode data.
 
-This is a sample Java (Jdk 11) / Maven / Spring Boot Reactive Webflux (Spring 5) application with shared redis and Docker (for redis, pgadmin, postgresql)
+This is a sample Java (Jdk 11) / Maven / Spring Boot Reactive Stream (Webflux) (Spring 5) application with shared redis and Docker (for redis, pgadmin, postgresql)
 along with Spring Reactive Security
 
 ABOUT THE SERVICE
