@@ -15,10 +15,7 @@ An API that allows mobile clients to retrieve the suburb information
 by postcode.
 An API that allows mobile clients to retrieve a postcode given a
 suburb name.
-
-A secured API to add new suburb and postcode combinations (you'll
-have to work out how this should work)
-
+A secured API to add new suburb and postcode combinations 
 Some form of persistence.
 
 ASSUMPTION 
@@ -130,8 +127,6 @@ Few Sample Postcode snippet after running
 <img width="1089" alt="image" src="https://user-images.githubusercontent.com/16664076/218327630-4759b51e-655c-418f-b5c1-4ca09dc5e2a0.png">
 
 
-
-
 //CURRENT DESIGN :
 
 Used Spring webflux Reactive strem for some endpoints to depict Non Blocking I/O behavior ,if concuurent threads from client app than it can scale better as non blocking,Further used redis cache as well with Scheduler which fetches every 15 seconds from DB and Put it in Hash Redis , which can be used to access endpoints  (few endpoints for redis consideratino has been skipped but can be done) , This will have High Throughput and Lower laterncy , we could have used Cache Aside Pattern as well. 
@@ -147,11 +142,19 @@ You will get 401 ,403 etc client server error depends on auth config.
 //FURTHER IMPROVEMENT CAN BE DONE.. :
 
 Test can be extended  with more coverage..
-Desing Consideration and To Do further- Server side event or Redis Pub Sub model can be used if integrating with third party and any update in Source DB to notify consumer about update and take action. 
+
+Desing Consideration and To Do further- 
+
+Server side event or Redis Pub Sub model can be used if integrating with third party and any update in Source DB to notify consumer about update and take action. 
+
 Could have used Parallel Stream for fetching records in stream pipeline.
-Custom Exception handling could have been done and few inputs and outputs validations ( right now we are sending 2xxx, and for Auth eror 4XX etc)
+
+Custom Exception handling could have been done and few inputs and outputs validations ( right now we are sending 2xxx, and for Auth eror 4XX etc) , can make more resilent.
+
 we can return list of Postcodes or Suburbs as well if needed to the client rather than combinations of postcode and suburb and can swith between json vs stream .. 
-Redis Security etc.
+
+Redis Security etc. and JWT Auth or Oauth.
+
 Can use profile etc for various environment and deploye containers in ECS/Farget..
 
 
