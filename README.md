@@ -128,6 +128,10 @@ Few Sample Postcode snippet after running
 200 Get Suburb details by postCode name ( user and admin only will allow to have this running)
 <img width="1089" alt="image" src="https://user-images.githubusercontent.com/16664076/218327630-4759b51e-655c-418f-b5c1-4ca09dc5e2a0.png">
 
+if client needs suburb or postcode as list that can be done as well 
+<img width="1090" alt="image" src="https://user-images.githubusercontent.com/16664076/218329557-e3270771-df9b-4234-b457-2e63e6450b98.png">
+
+
 
 //CURRENT DESIGN :
 
