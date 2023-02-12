@@ -3,7 +3,8 @@
 Post code lookup service
 A postcode service to show the rest api architecture within Australia postcode data.
 
-This is a sample Java / Maven / Spring Boot Reactive Webflux  (version 1.5.16) application with shared redis and Docker (for redis, pgadmin, postgresql)
+This is a sample Java / Maven / Spring Boot Reactive Webflux (Spring 5) application with shared redis and Docker (for redis, pgadmin, postgresql)
+along with Spring Reactive Security
 
 About the Service
 The service is a postcode lookup service. It has 3 functions:
@@ -24,9 +25,8 @@ create table postcodedetail (
     id bigint auto_increment,
     postcode int,
     suburb varchar(50),
-    primary key (id),
-
- CONSTRAINT postdetailunique UNIQUE (postcode, suburb)
+    primary key (id)
+    CONSTRAINT postdetailunique UNIQUE (postcode, suburb)
 );
 
 
@@ -92,11 +92,10 @@ Host: localhost:8080
 Cache-Control: no-cache
 Postman-Token: 66832f0f-767f-db40-52d3-af485b0e82b6
 
-Rest Other endpints have been created for put and delete and few get 
+Rest Other endpints have been created for put and delete and few gets for extendibility further ..
 
+<img width="946" alt="image" src="https://user-images.githubusercontent.com/16664076/218326127-ec6a21a9-3c8e-428d-9a06-756856bebf39.png">
 
-
-POST http://localhost:8080/api/postcode-detail?postcode=8777&suburb=myplace
 
 Current Design
 Used Spring webflux Reactive strem for some endpoints to depict Non Blocking I/O behavior if concuurent threads from client app than it can scale better,
@@ -108,6 +107,9 @@ and get endpoints , Admin only allowed for POST,PUT,DELETE endpoints and For GET
 Further Improvement..
 Test can be writen with more coverage. 
 Desing Consideration and To Do further- Server side event or Redis Pub Sub model can be used if integrationg with third party and any update in Source DB to notify consumer about update and take action. 
+Could have used Parallel Stream for fetching records
+Custom Exception handling could have been done .. ( right now we are sending 2xxx, and for Auth eror 4XX etc)
+
 
 
 
