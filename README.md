@@ -1,4 +1,4 @@
-# AusPostReactiveWebFlux
+# AUSPOSTREACTIVEWEBFLUX
 
 Post code lookup service
 A postcode service to show the rest api architecture within Australia postcode data.
